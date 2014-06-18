@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>CRUD operations with Cloudant</title>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <script type="application/javascript" src="config"></script>
+    <script type="application/javascript" src="songblog.js"></script>
+
+    <div id="wrapper">
+       <img src="cloudant.png">
+       <div id="title">
+            <a href="songblog.html">Manage Playlists</a> | 
+            <a href="songblog_users.html">Manage Users</a>
+       </div>
+       <div id="crud">
+          <dl>
+            <dt><u>Create a New User:</u></dt>
+              <dd><input type="text" id="userid" value="<User ID>">
+                  <input type="text" id="email" value="<Email>">
+                  <input type="text" id="birthday" value="<Birthday>"></dd>
+              <dd><input type="text" id="city" value="<City>">
+                  <input type="text" id="state" value="<State>">
+                  <input type="text" id="country" value="<Country>"></dd>
+              <dd><input type="button" id="createuser" value="CREATE!"></dd> 
+            <dt><u>Find a User:</u></dt>
+              <dd><input type="text" id="locate"></dd>
+              <dd><input type="button" id="locateuser" value="FIND!"></dd>
+            <dt><u>Find Users By Birthday:</u></dt>
+              <dd><input type="text" id="startdate" value="<Start-YYYYMMDD>">
+                  <input type="text" id="enddate" value="<End-YYYYMMDD>">
+                  <input type="checkbox" id="reverse" value="true">Reverse the results?</dd>
+              <dd><input type="button" id="sort_by_birthday" value="SORT!"></dd>
+          </dl>
+       </div>
+
+       <div id="output">
+          <b>User Output:</b>
+          <p><pre id="output-data"></pre></p>
+
+       </div>
+
+    </div>	
+  </body>
+</html>

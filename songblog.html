@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>CRUD operations with Cloudant</title>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <script type="application/javascript" src="config"></script>
+    <script type="application/javascript" src="songblog.js"></script>
+
+    <div id="wrapper">
+       <img src="cloudant.png">
+      <div id="login">
+        <u>Select a User ID:</u>
+        <select id="selectuserid">
+          <option value="empty"> --- </option>
+        </select>
+      </div>
+       <div id="title">
+            <a href="songblog.html">Manage Playlists</a> | 
+            <a href="songblog_users.html">Manage Users</a>
+       </div>
+       <div id="crud">
+
+          <dl>
+            <dt><u>Create New Playlist:</u></dt>
+              <dd><input type="text" id="newplaylistname"><input type="button" id="create" value="CREATE!"></dd>
+            <dt><u>Display Playlist:</u></dt>
+              <dd>
+                <select id="readplaylistname">
+                  <option value="empty"> --- </option>
+                </select><input type="button" id="read" value="READ!">
+              </dd>
+            <dt><u>Add Song to Playlist:</u></dt>
+              <dd>
+                <select id="updateplaylistname">
+                  <option value="empty"> --- </option>
+                </select>
+                <input type="text" id="artistname" value="<Artist Name>">
+                <input type="text" id="songname" value="<Song Title>">
+                <input type="button" id="update" value="UPDATE!">
+              </dd>
+            <dt><u>Delete Playlist:</u></dt>
+              <dd>
+                <select id="deleteplaylistname">
+                  <option value="empty"> --- </option>
+                </select>
+                <input type="button" id="delete" value="DELETE!">
+              </dd>
+            <dt><u>Comments/Likes for Playlist:</u></dt>
+              <dd>
+                <select id="actionplaylistname">
+                  <option value="empty"> --- </option>
+                </select>
+                <input type="button" id="submit" value="COMMENT!">
+                <input type="button" id="like" value="LIKE!">
+                <input type="button" id="getactions" value="SHOW COMMENTS/LIKES!">
+                <br/>
+                <textarea id="comment">Enter your comment here...</textarea>
+              </dd>
+            <dt><u>Search Playlists and Comments:</u></dt>
+              <dd><input type="text" id="searchquery"><input type="button" id="search" value="SEARCH!"></dd>
+          </dl>
+       </div>
+
+       <div id="output">
+          <b>Playlist Output:</b>
+          <p><pre id="output-data"></pre></p>
+
+       </div>
+
+    </div>	
+  </body>
+</html>

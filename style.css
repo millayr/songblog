@@ -1,0 +1,68 @@
+
+
+body {
+	background: #3399FF;
+}
+
+#wrapper {
+	padding: 10px;
+}
+
+#title {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#output {
+	margin-top: 30px;
+}
+
+#login {
+	padding: 5px;
+	text-align: center;
+	float: right;
+	min-width: 300px;
+	background: #66CCFF;
+	border: 2px solid;
+}
+
+#crud {
+	width: 550px;
+	float: left;
+	min-height: 400px;
+	/*display: table-cell;*/
+}
+
+#output {
+	min-height: 300px;
+	width: 500px;
+	background: white;
+	float: left;
+	padding: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	border: 2px solid;
+	overflow: scroll;
+	/*display: table-cell;*/
+}
+
+dt {
+	padding-top: 20px;
+}
+
+dd {
+	padding: 0px;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: black;
+}
+
+#comment {
+	height: 100px;
+	width: 400px;
+}

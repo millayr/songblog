@@ -1,0 +1,24 @@
+#!/bin/bash
+
+. ./config
+doc='doc'
+docUrl="https://$user:$pass@$user.cloudant.com/$db/$doc"
+curl='curl -sS'
+
+function getRev {
+  $curl "$docUrl" | jq -r '._rev'
+}
+
+function uploadAttachment { #file, mime type
+  $curl -X PUT "$docUrl/$1?rev=`getRev`" -H "Content-Type: $2" -d "$(cat $1)"
+}
+
+
+$curl -X 'PUT' "$docUrl" -H 'Content-Type: application/json' -d '{}'
+uploadAttachment 'songblog.html' 'text/html'
+uploadAttachment 'songblog_users.html' 'text/html'
+uploadAttachment 'config' 'application/javascript'
+uploadAttachment 'jquery.js' 'application/javascript'
+uploadAttachment 'style.css' 'text/css'
+uploadAttachment 'songblog.js' 'application/javascript'
+$curl -X 'PUT' --data-binary @cloudant.png "$docUrl/cloudant.png?rev=`getRev`" -H "Content-Type: image/png"
