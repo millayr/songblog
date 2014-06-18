@@ -5,5 +5,5 @@ How to run
 2. Edit the config-example file so that it contains your username, password, and database name.
 3. mv config-example config
 4. ./deploy
-6. Point your browser to https://$user:$pass@$user.cloudant.com/$db/haengematte/crud.html with $user, $pass, and $db replaced with the values from your config file.
+6. Point your browser to https://$user:$pass@$user.cloudant.com/$db/doc/songblog.html with $user, $pass, and $db replaced with the values from your config file.
 
