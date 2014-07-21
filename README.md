@@ -13,7 +13,7 @@ How to run
 Necessary Views and Search Indexes
 ===========
 
-\_design/users/\_view/users\_by\_birthday
+\_design/users/\_view/users\_by\_bday
 -----------------------------------------
 
     function(doc) {
