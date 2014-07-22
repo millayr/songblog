@@ -6,7 +6,7 @@ $( document ).ready(function() {
    var types = baseUrl + "/_design/all/_search/types";
    //var by_userid = baseUrl + "/_design/users/_view/by_userid";
    var by_userid = baseUrl + "/_design/users/_search/by_userid";
-   var sort_by_birthday = baseUrl + "/_design/users/_view/users_by_birthday";
+   var sort_by_birthday = baseUrl + "/_design/users/_view/users_by_bday";
    var playlist_and_songs = baseUrl + "/_design/playlists/_view/playlist_and_songs";
    var playlist_and_actions = baseUrl + "/_design/playlists/_view/playlist_with_actions";
    var playlists_and_comments = baseUrl + "/_design/all/_search/playlists_and_comments";
